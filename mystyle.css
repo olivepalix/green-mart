@@ -1,0 +1,146 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 1px;;
+    padding:0;
+    box-sizing:border-box;
+}
+#mainHeader {
+    background-color: #DAF7A6;
+}
+
+.headerContent {
+    display: flex;
+    align-items: center;
+    padding: 10px; 
+}
+
+#logo {
+    margin-right: 10px; 
+    
+}
+
+#mainNav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#mainNav li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#mainNav a { 
+    color:black;
+    padding: 7px;
+    text-decoration: none;
+}
+#mainNav  a:hover{ 
+        color:black;
+        padding: 7px;
+        text-decoration: underline;
+}
+.hero {
+    width: 100%;
+    height: auto; /* Ensures the image maintains its aspect ratio */
+    padding: 10px;
+}
+.contentContainer p{
+    text-align: center;
+  
+}
+
+@media screen and (max-width: 768px) {
+    .contentContainer {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+    .container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+    img {
+        width: 100%; /* Make images responsive and take full width on smaller screens */
+        height: auto; /* Ensure images maintain their aspect ratio */
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    padding:10px;
+}
+
+.contentWrapper {
+    display: flex;
+    width: 100%; /* Ensure the content wrapper takes up full width */
+}
+
+.container img {
+    flex: 1; /* Image takes up 50% of container horizontally */
+    max-width: 50%; /* Ensure image takes up maximum of 50% width */
+    height: auto; /* Ensures the image maintains its aspect ratio */
+}
+
+.textWrapper {
+    flex: 1; /* Text takes up 50% of container horizontally */
+    padding: 0 20px; /* Add some spacing between the image and the text */
+}
+
+
+
+/* Limit maximum width of content container */
+.contentContainer {
+    max-width: 1200px; /* Adjust maximum width as needed */
+    margin: 0 auto; /* Center the content container horizontally */
+}
+/*if the user's screen is below 600px, it switches to a mobile version of the webpage. it takes 100% of the width available*/
+
+footer{
+    list-style-type:none;
+    display:block;
+    background-color: #DAF7A6 ;
+    align-items:center;
+    
+}
+.locations{
+    display:flex;
+    flex-direction: row;
+    overflow-x: auto; /* Enable horizontal scrolling if images overflow */
+    
+}
+.Location_img{
+    height: 100px;
+    width: 150px;
+}
+.Map{
+    display: flex;
+    justify-content: center;
+}
+#mainContainer{
+    align-content: center;
+}
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin:0 auto;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tfoot {
+    font-weight: bold;
+    text-align: center;
+}
+.Content{
+    padding-left: 40px;
+    padding-right: 40px;
+}
