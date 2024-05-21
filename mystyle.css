@@ -1,13 +1,24 @@
-*{
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 1px;;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --primary-color: #DAF7A6;
+    --secondary-color: #eed9c4;
+}
+*{ 
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
     padding:0;
-    box-sizing:border-box;
+    box-sizing:border-box;  
 }
 #mainHeader {
     background-color: #DAF7A6;
 }
-
+body{
+    background-color: #eed9c4;
+}
 .headerContent {
     display: flex;
     align-items: center;
@@ -15,16 +26,43 @@
 }
 
 #logo {
-    margin-right: 10px; 
-    
+    margin-right: 10px;  
 }
 
 #mainNav {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    .roboto-black {
+        font-family: "Roboto", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+      }
+     
 }
+.dropdown-content{
+    display:none;
+}
+#mainNav ul li:hover.dropdown-content{
+    display:block;
+    position:absolute;
+    background: #DAF7A6;
+    margin: top 5px;
+    margin-left:-15px;
+}
+#mainNav ul li:hover.dropdown-content ul{
+    display:block;
+    margin:10px;
+}
+#mainNav ul li:hover .dropdown-content ul li{
+    width:150px;
+    padding:10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
 
+}
 #mainNav li {
     display: inline-block;
     margin-right: 10px;
@@ -93,12 +131,18 @@
     margin: 0 auto; /* Center the content container horizontally */
 }
 /*if the user's screen is below 600px, it switches to a mobile version of the webpage. it takes 100% of the width available*/
-
+.bullet-list li{
+    margin-left: 10%;
+}
+.numbered-list li{
+    margin-left: 10%;
+}
 footer{
     list-style-type:none;
     display:block;
     background-color: #DAF7A6 ;
     align-items:center;
+    text-decoration: none;
     
 }
 .locations{
@@ -128,19 +172,70 @@ table {
 th, td {
     padding: 10px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
-    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
 }
 
 th {
     background-color: #f2f2f2;
 }
 
-tfoot {
+#table-footer{
     font-weight: bold;
-    text-align: center;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+    height: 50px;
 }
 .Content{
     padding-left: 40px;
     padding-right: 40px;
+}
+#table-footer{
+    text-align: justify;
+}
+/*diary products*/
+.products{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    margin-left: 250px;
+}
+.flex-content{
+    width:33%;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+.dairy-img{
+    max-width: 100%;
+    height:auto;
+    border-radius: 7px;
+    width: 150px;
+    height:170px;
+}
+.order-button{
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition effect */
+}
+
+.custom-button:hover {
+    /* Hover styles */
+    background-color: #DAF7A6 ;
+}
+/*vegetable page*/
+.vegetable-img{
+    height:100px;
+    width:200px;
+}
+.grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    width:90%;
+    justify-content: center;
 }
